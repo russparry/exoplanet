@@ -1,0 +1,139 @@
+# How to Access Your Exoplanet Analysis
+
+## 🎯 Quick Start
+
+Once the analysis completes, you'll have everything you need in these locations:
+
+### Main Dashboard
+**📂 File:** `exoplanet_dashboard.html`
+**📍 Location:** Same directory as this file
+**🌐 How to open:** Double-click the file, or right-click → Open with → Your web browser
+
+This HTML dashboard contains:
+- Summary statistics
+- All visualizations with descriptions
+- Links to interactive 3D plots
+- Explanations of each analysis step
+
+### All Visualization Plots
+**📂 Folder:** `plots/`
+
+Contains 8 high-resolution images:
+1. `radius_vs_period.png` - Shows all planets in radius vs orbital period space
+2. `mass_radius.png` - Mass-radius relationship distinguishing rocky vs gaseous planets
+3. `radius_histogram.png` - Distribution showing the famous "radius gap"
+4. `insolation_vs_radius.png` - Stellar energy received vs planet size
+5. `bls_periodogram.png` - Period detection for TOI-700
+6. `folded_lightcurve.png` - Transit signal visualization
+7. `feature_importance.png` - ML model feature rankings
+8. `interactive_3d.html` - **Interactive 3D plot** (double-click to open in browser!)
+
+### Raw Data Files
+**📂 Folder:** `data/`
+
+- `exoplanet_catalog.csv` - Full NASA dataset with all computed features
+- `toi700_lightcurve.csv` - TESS light curve time series data
+
+You can open these CSV files in Excel, Python, or any data analysis tool.
+
+## 🔄 How to Re-run the Analysis
+
+If you want to run the analysis again (to get updated data from NASA):
+
+```bash
+cd "C:\Users\russp\OneDrive\Documents\School\strat490\firstapp\astroproject"
+python3 exoplanet_analysis.py
+```
+
+The script will:
+1. Download latest exoplanet data from NASA
+2. Download TESS light curves
+3. Perform all analyses
+4. Create all visualizations
+5. Build the ML classifier
+6. Generate the dashboard
+
+**Time:** Takes ~3-5 minutes depending on your internet connection
+
+## 📊 What Each Visualization Shows
+
+### 1. Radius vs Period
+Shows where planets exist in size-orbit space. Hot Jupiters are large planets close to their stars (short periods), while super-Earths and mini-Neptunes occupy different regions.
+
+### 2. Mass-Radius
+Helps distinguish planet composition. Rocky planets have a different mass-radius relationship than gaseous planets.
+
+### 3. Radius Histogram
+Shows the "Fulton Gap" around 1.5-2.0 Earth radii - a mysterious gap in planet sizes that separates super-Earths from mini-Neptunes.
+
+### 4. Insolation vs Radius
+Shows how much stellar energy planets receive. The green zone marks potentially habitable conditions.
+
+### 5. BLS Periodogram
+Shows the orbital period detected for TOI-700 using transit timing analysis.
+
+### 6. Folded Light Curve
+When you "fold" observations at the orbital period, the transit signal becomes clear - this is how we detect exoplanets!
+
+### 7. Feature Importance
+Shows which physical parameters are most useful for classifying planets as rocky vs gaseous.
+
+### 8. Interactive 3D (HTML)
+Rotate and explore the dataset in 3D! Hover over points to see planet names.
+
+## 🤖 Machine Learning Results
+
+The Random Forest classifier was trained to distinguish:
+- **Rocky planets** (radius < 1.6 Earth radii)
+- **Gaseous planets** (radius ≥ 1.6 Earth radii)
+
+Key features used:
+- Orbital period
+- Stellar insolation
+- Equilibrium temperature
+- Stellar radius
+- Stellar effective temperature
+
+The model shows that physical properties can effectively predict planet type!
+
+## 📝 For Your Report
+
+All analyses follow the workflow from README.md:
+✓ Downloaded NASA Exoplanet Archive catalog
+✓ Downloaded TESS light curves (TOI-700)
+✓ Created exploratory visualizations
+✓ Performed Box Least Squares transit detection
+✓ Engineered physical features (insolation, temperature)
+✓ Built machine learning classifier
+✓ Created interactive dashboard
+
+## 🆘 Troubleshooting
+
+**Q: Plots aren't showing up**
+A: Make sure the `plots/` folder exists and check that the script completed without errors.
+
+**Q: Dashboard looks broken**
+A: Make sure the `plots/` folder is in the same directory as `exoplanet_dashboard.html`.
+
+**Q: Interactive 3D plot won't open**
+A: The file `plots/interactive_3d.html` needs a web browser. Try right-click → Open With → Chrome/Firefox/Edge.
+
+**Q: Want to modify the analysis?**
+A: Edit `exoplanet_analysis.py` and re-run it. The code is well-commented!
+
+## 🌟 Tips
+
+1. **For presentations:** Use the dashboard HTML - it looks professional!
+2. **For reports:** Use the high-res PNG images from the `plots/` folder
+3. **For further analysis:** Use the CSV files in the `data/` folder
+4. **Interactive demos:** Use the 3D plot - it's impressive!
+
+## 📚 Data Sources
+
+- **NASA Exoplanet Archive**: https://exoplanetarchive.ipac.caltech.edu/
+- **TESS Mission**: https://tess.mit.edu/
+- **Lightkurve**: Python package for Kepler/TESS data analysis
+
+---
+**Generated by:** Automated exoplanet analysis pipeline
+**Date:** December 10, 2025
