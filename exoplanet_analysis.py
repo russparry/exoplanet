@@ -490,8 +490,7 @@ dashboard_html = f"""
     <div class="container">
         <h1>Exoplanet Characterization & Habitability Analysis</h1>
         <div class="subtitle">
-            Comprehensive analysis of confirmed exoplanets from NASA Exoplanet Archive<br>
-            Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+            Comprehensive analysis of confirmed exoplanets from NASA Exoplanet Archive
         </div>
 
         <div class="info-box">
