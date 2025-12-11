@@ -1,13 +1,13 @@
 # How to Access Your Exoplanet Analysis
 
-## 🎯 Quick Start
+## Quick Start
 
 Once the analysis completes, you'll have everything you need in these locations:
 
 ### Main Dashboard
-**📂 File:** `exoplanet_dashboard.html`
-**📍 Location:** Same directory as this file
-**🌐 How to open:** Double-click the file, or right-click → Open with → Your web browser
+**File:** `exoplanet_dashboard.html`
+**Location:** Same directory as this file
+**How to open:** Double-click the file, or right-click → Open with → Your web browser
 
 This HTML dashboard contains:
 - Summary statistics
@@ -16,7 +16,7 @@ This HTML dashboard contains:
 - Explanations of each analysis step
 
 ### All Visualization Plots
-**📂 Folder:** `plots/`
+**Folder:** `plots/`
 
 Contains 8 high-resolution images:
 1. `radius_vs_period.png` - Shows all planets in radius vs orbital period space
@@ -29,14 +29,14 @@ Contains 8 high-resolution images:
 8. `interactive_3d.html` - **Interactive 3D plot** (double-click to open in browser!)
 
 ### Raw Data Files
-**📂 Folder:** `data/`
+**Folder:** `data/`
 
 - `exoplanet_catalog.csv` - Full NASA dataset with all computed features
 - `toi700_lightcurve.csv` - TESS light curve time series data
 
 You can open these CSV files in Excel, Python, or any data analysis tool.
 
-## 🔄 How to Re-run the Analysis
+## How to Re-run the Analysis
 
 If you want to run the analysis again (to get updated data from NASA):
 
@@ -55,7 +55,7 @@ The script will:
 
 **Time:** Takes ~3-5 minutes depending on your internet connection
 
-## 📊 What Each Visualization Shows
+## What Each Visualization Shows
 
 ### 1. Radius vs Period
 Shows where planets exist in size-orbit space. Hot Jupiters are large planets close to their stars (short periods), while super-Earths and mini-Neptunes occupy different regions.
@@ -81,7 +81,7 @@ Shows which physical parameters are most useful for classifying planets as rocky
 ### 8. Interactive 3D (HTML)
 Rotate and explore the dataset in 3D! Hover over points to see planet names.
 
-## 🤖 Machine Learning Results
+## Machine Learning Results
 
 The Random Forest classifier was trained to distinguish:
 - **Rocky planets** (radius < 1.6 Earth radii)
@@ -96,18 +96,18 @@ Key features used:
 
 The model shows that physical properties can effectively predict planet type!
 
-## 📝 For Your Report
+## For Your Report
 
 All analyses follow the workflow from README.md:
-✓ Downloaded NASA Exoplanet Archive catalog
-✓ Downloaded TESS light curves (TOI-700)
-✓ Created exploratory visualizations
-✓ Performed Box Least Squares transit detection
-✓ Engineered physical features (insolation, temperature)
-✓ Built machine learning classifier
-✓ Created interactive dashboard
+- Downloaded NASA Exoplanet Archive catalog
+- Downloaded TESS light curves (TOI-700)
+- Created exploratory visualizations
+- Performed Box Least Squares transit detection
+- Engineered physical features (insolation, temperature)
+- Built machine learning classifier
+- Created interactive dashboard
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 **Q: Plots aren't showing up**
 A: Make sure the `plots/` folder exists and check that the script completed without errors.
@@ -121,14 +121,14 @@ A: The file `plots/interactive_3d.html` needs a web browser. Try right-click →
 **Q: Want to modify the analysis?**
 A: Edit `exoplanet_analysis.py` and re-run it. The code is well-commented!
 
-## 🌟 Tips
+## Tips
 
 1. **For presentations:** Use the dashboard HTML - it looks professional!
 2. **For reports:** Use the high-res PNG images from the `plots/` folder
 3. **For further analysis:** Use the CSV files in the `data/` folder
 4. **Interactive demos:** Use the 3D plot - it's impressive!
 
-## 📚 Data Sources
+## Data Sources
 
 - **NASA Exoplanet Archive**: https://exoplanetarchive.ipac.caltech.edu/
 - **TESS Mission**: https://tess.mit.edu/

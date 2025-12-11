@@ -488,14 +488,14 @@ dashboard_html = f"""
 </head>
 <body>
     <div class="container">
-        <h1>🌟 Exoplanet Characterization & Habitability Analysis</h1>
+        <h1>Exoplanet Characterization & Habitability Analysis</h1>
         <div class="subtitle">
             Comprehensive analysis of confirmed exoplanets from NASA Exoplanet Archive<br>
             Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         </div>
 
         <div class="info-box">
-            <h2>📋 Project Summary</h2>
+            <h2>Project Summary</h2>
             <p>
                 This project uses data from the NASA Exoplanet Archive and TESS mission to:
             </p>
@@ -531,48 +531,48 @@ dashboard_html = f"""
             </div>
         </div>
 
-        <h2 style="color: #667eea; margin-top: 50px;">📊 Visualizations</h2>
+        <h2 style="color: #667eea; margin-top: 50px;">Visualizations</h2>
 
         <div class="plot-grid">
             <div class="plot-card">
-                <h3>🌍 Radius vs Orbital Period</h3>
+                <h3>Radius vs Orbital Period</h3>
                 <img src="plots/radius_vs_period.png" alt="Radius vs Period">
                 <p>Shows the distribution of exoplanets in radius-period space. Color indicates equilibrium temperature. Notice the different populations: hot Jupiters (large, short period), super-Earths, and mini-Neptunes.</p>
             </div>
 
             <div class="plot-card">
-                <h3>⚖️ Mass-Radius Relationship</h3>
+                <h3>Mass-Radius Relationship</h3>
                 <img src="plots/mass_radius.png" alt="Mass-Radius">
                 <p>Demonstrates the relationship between planetary mass and radius. Rocky planets (red line) have a steeper slope than gaseous planets (blue line). Color shows density variation.</p>
             </div>
 
             <div class="plot-card">
-                <h3>🌞 Insolation vs Radius</h3>
+                <h3>Insolation vs Radius</h3>
                 <img src="plots/insolation_vs_radius.png" alt="Insolation vs Radius">
                 <p>Shows stellar insolation (energy received) vs planet radius. The green shaded region marks the potentially habitable zone (0.25-1.5 times Earth's insolation).</p>
             </div>
 
             <div class="plot-card">
-                <h3>📡 BLS Periodogram</h3>
+                <h3>BLS Periodogram</h3>
                 <img src="plots/bls_periodogram.png" alt="BLS Periodogram">
                 <p>Box Least Squares periodogram for TOI-700, showing the detected orbital period from TESS light curve analysis.</p>
             </div>
 
             <div class="plot-card">
-                <h3>🔄 Phase-Folded Light Curve</h3>
+                <h3>Phase-Folded Light Curve</h3>
                 <img src="plots/folded_lightcurve.png" alt="Folded Light Curve">
                 <p>Raw and phase-folded light curve of TOI-700. The folded curve reveals the transit signature by stacking observations at the same orbital phase.</p>
             </div>
 
             <div class="plot-card">
-                <h3>🎯 Feature Importance</h3>
+                <h3>Feature Importance</h3>
                 <img src="plots/feature_importance.png" alt="Feature Importance">
                 <p>Random Forest model feature importances for classifying rocky vs gaseous planets. Shows which physical parameters are most predictive.</p>
             </div>
         </div>
 
         <div class="interactive-section">
-            <h2>🎮 Interactive 3D Visualization</h2>
+            <h2>Interactive 3D Visualization</h2>
             <p>
                 Explore the exoplanet dataset in three dimensions! Rotate, zoom, and hover over individual planets to see their names and properties.
             </p>
@@ -580,7 +580,7 @@ dashboard_html = f"""
         </div>
 
         <div class="info-box">
-            <h2>💾 Data Files</h2>
+            <h2>Data Files</h2>
             <p>All processed data has been saved in the <code>data/</code> directory:</p>
             <ul>
                 <li><strong>exoplanet_catalog.csv</strong> - Full NASA Exoplanet Archive dataset with engineered features</li>
@@ -589,7 +589,7 @@ dashboard_html = f"""
         </div>
 
         <div class="info-box">
-            <h2>🤖 Machine Learning Results</h2>
+            <h2>Machine Learning Results</h2>
             <p>
                 A Random Forest classifier was trained to distinguish between rocky (R &lt; 1.6 R⊕) and gaseous (R &ge; 1.6 R⊕) planets using physical parameters:
             </p>
@@ -607,7 +607,7 @@ dashboard_html = f"""
 
         <div class="footer">
             <p>
-                🤖 Generated with Python using lightkurve, astroquery, scikit-learn, matplotlib, and plotly<br>
+                Generated with Python using lightkurve, astroquery, scikit-learn, matplotlib, and plotly<br>
                 Data source: NASA Exoplanet Archive & TESS Mission<br>
                 <em>For educational and research purposes</em>
             </p>
