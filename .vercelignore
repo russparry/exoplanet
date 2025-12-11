@@ -1,0 +1,7 @@
+*.py
+__pycache__/
+*.pyc
+.git/
+.gitignore
+README.md
+HOW_TO_ACCESS.md
